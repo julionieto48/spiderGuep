@@ -1,0 +1,15 @@
+/* Pagina de estilo*/
+
+body {
+  font-size: 48px ; /* 48 pixeles afecta el cuerpo del html*/
+}
+p {
+  color: blueviolet ;
+}
+h1 {
+  color: aquamarine;
+  background-color: darkgray ;
+}
+ul {
+  list-style: lower-greek;
+}
