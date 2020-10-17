@@ -1,0 +1,76 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red180\green36\blue25;\red255\green255\blue255;\red0\green0\blue0;
+\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c76409\c21698\c12524;\csgray\c100000;\csgray\c0;
+\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+\margl1440\margr1440\vieww14620\viewh10120\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 lesson 4 databa modelo y admn panel\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 django models.py ac\'e1 se guardadlos modelos son clases de python que heredan de django modelo y puede crear clases que recrean bases de datos\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+   por defecto se usa un sql\'85pero en terminas de producciones mejor implementar my sql o postres\
+\
+  en settings  .. no hay credenciales por ser de test\
+  cuando en terminal 
+\f1\fs22 \cf2 \cb3 \CocoaLigature0 You have 18 unapplied migration(s)  
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 django tiene un setup estructurado de base de datos y no se esta realizando un cambio\'85 se debe migrar este setup a una base de datos\
+  hacer  en terminal  : python3 manage.py migrate .. crea las tablas a una estructura default, como se usa sql lite se usara \'85 djandoadmn panel para ver las tablas:\
+       crear usuario python3 manage.py createsuperuser \'85 poner nombre e mail y password\
+\
+\'85 crear el servidor etc..\
+   poner/admn y ah\'ed esta la base de datos\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 class Customer(hereda de.. models.Model):\
+\
+    al hacer la base d e datos 
+\f1\fs22 \cf4 \cb3 \CocoaLigature0 python3 manage.py makemigrations\
+         se crea un folder en carpeta migraciones\
+\
+          python3 manage.py migrate \'85 a\'f1ade tabla al data base cada que s hace cambios \'f3sea s a\'f1ade un modelo\
+\
+\
+\
+ir a accounts /admn.py  y hacer register\
+ 
+\f2\fs24 \cf5 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec5 from .models import *\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2865\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf5 admin.site.register(Customer)     se crea el registro de customer y puedo verlo como admin \
+etc..\
+\
+cada clase es un modelo
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \cell \lastrow\row
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+
+\f1\fs22 \cf2 \cb3 \CocoaLigature0 \
+
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 esson 5 database relationships\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0   one to many\
+   . el customer puede pedir cuantas ordenes desea solo se puede referencias orden a un customer\
+   customer ID es asignado al producto deseado\
+\
+  many to many \
+   se usan tags en many to many un producto puede referencias a varios tags de acuerdo a lo necesario\
+  en la estructura hay una jerarqu\'eda \
+     \
+\
+\
+\
+\
+  }
